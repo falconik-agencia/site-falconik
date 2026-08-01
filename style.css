@@ -43,8 +43,6 @@ body {
   flex-direction: column;
 }
 
-/* Background: imagem real (arquivo em assets/background.jpg),
-   preenchendo toda a largura e altura do frame. */
 .frame__bg {
   position: absolute;
   inset: 0;
