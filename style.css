@@ -183,6 +183,7 @@ body {
   justify-content: center;
   text-align: center;
   flex: 1;
+  gap: 6px;
 }
 
 .btn-contato__label {
@@ -288,54 +289,309 @@ body {
   color: var(--magenta);
 }
 
-/* ============ RESPONSIVE ============ */
+/* ============ RESPONSIVE — DESKTOP FIRST ============ */
 
-@media (max-width: 900px) {
+/* 1600px */
+@media (max-width: 1600px) {
+  body {
+    padding: 40px;
+  }
+}
+
+/* 1440px */
+@media (max-width: 1440px) {
+  :root {
+    --frame-padding: 72px;
+  }
+  .title {
+    font-size: 40px;
+  }
+}
+
+/* 1366px */
+@media (max-width: 1366px) {
+  :root {
+    --frame-padding: 64px;
+  }
+  .content-left {
+    width: 360px;
+    height: 460px;
+  }
+  .content-right {
+    width: 640px;
+  }
+  .title {
+    font-size: 38px;
+  }
+  .txt-1 {
+    font-size: 24px;
+  }
+}
+
+/* 1280px */
+@media (max-width: 1280px) {
+  :root {
+    --frame-padding: 56px;
+  }
+  .content {
+    gap: 32px;
+  }
+  .content-left {
+    width: 320px;
+    height: 420px;
+  }
+  .content-right {
+    width: 580px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .txt-1 {
+    font-size: 22px;
+  }
+  .txt-2 {
+    font-size: 19px;
+  }
+  .btn-contato {
+    width: 300px;
+    height: 88px;
+  }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+  :root {
+    --frame-padding: 40px;
+  }
   .frame {
     height: auto;
-    min-height: var(--frame-h);
+    min-height: 700px;
   }
-
   .content {
-    flex-direction: column-reverse;
-    padding: 48px 32px 0 32px;
+    gap: 24px;
   }
-
-  .content-right {
-    width: 100%;
-  }
-
   .content-left {
     width: 260px;
-    height: 320px;
+    height: 340px;
   }
-
+  .content-right {
+    width: 480px;
+    gap: 28px;
+  }
+  .logo-application {
+    width: 220px;
+  }
   .title {
-    font-size: 32px;
+    font-size: 30px;
   }
-
   .txt-1 {
     font-size: 20px;
   }
-
   .txt-2 {
-    font-size: 18px;
+    font-size: 17px;
   }
+  .btn-contato {
+    width: 280px;
+    height: 82px;
+  }
+}
 
+/* 768px */
+@media (max-width: 768px) {
+  :root {
+    --frame-padding: 32px;
+  }
+  .frame {
+    height: auto;
+    min-height: unset;
+    border-radius: 20px;
+  }
+  .content {
+    flex-direction: column;
+    padding: 48px 32px 0 32px;
+    gap: 32px;
+  }
+  .content-right {
+    width: 100%;
+    order: 1;
+  }
+  .content-left {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+    order: 2;
+  }
+  .falcon-vertical {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+  }
+  .logo-application {
+    width: 200px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .txt-1 {
+    font-size: 19px;
+  }
+  .txt-2 {
+    font-size: 17px;
+  }
+  .btn-contato {
+    width: 320px;
+    height: 92px;
+  }
   .footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
     padding: 24px 32px 40px 32px;
   }
-
   .footer__line {
     width: 100%;
   }
 }
 
-@media (max-width: 480px) {
+/* 576px */
+@media (max-width: 576px) {
+  .content {
+    padding: 40px 24px 0 24px;
+    gap: 24px;
+  }
+  .logo-application {
+    width: 170px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .txt-1 {
+    font-size: 17px;
+  }
+  .txt-2 {
+    font-size: 15px;
+  }
+  .content-left {
+    max-width: 180px;
+  }
+  .falcon-vertical {
+    max-height: 200px;
+  }
   .btn-contato {
     width: 100%;
+    height: 84px;
+    padding: 0 18px;
+    gap: 14px;
+  }
+  .btn-contato__icon {
+    width: 48px;
+    height: 48px;
+  }
+  .btn-contato__label {
+    font-size: 14px;
+  }
+  .btn-contato__phone {
+    font-size: 16px;
+  }
+  .footer {
+    padding: 20px 24px 32px 24px;
+    gap: 12px;
+  }
+  .txt-slogan {
+    font-size: 12px;
+  }
+  .footer__email {
+    font-size: 13px;
+  }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+  .content {
+    padding: 32px 20px 0 20px;
+  }
+  .logo-application {
+    width: 150px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .txt-1 {
+    font-size: 15px;
+  }
+  .txt-2 {
+    font-size: 14px;
+  }
+  .content-left {
+    max-width: 150px;
+  }
+  .falcon-vertical {
+    max-height: 170px;
+  }
+  .btn-contato {
+    height: 76px;
+  }
+  .btn-contato__icon {
+    width: 42px;
+    height: 42px;
+  }
+  .btn-contato__phone {
+    font-size: 15px;
+  }
+  .footer {
+    flex-wrap: wrap;
+  }
+  .txt-slogan {
+    white-space: normal;
+    font-size: 11px;
+  }
+}
+
+/* 320px — menor tela suportada */
+@media (max-width: 320px) {
+  body {
+    padding: 12px;
+  }
+  .content {
+    padding: 24px 16px 0 16px;
+    gap: 20px;
+  }
+  .logo-application {
+    width: 130px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .txt-1 {
+    font-size: 14px;
+  }
+  .txt-2 {
+    font-size: 13px;
+  }
+  .content-left {
+    max-width: 130px;
+  }
+  .falcon-vertical {
+    max-height: 150px;
+  }
+  .btn-contato {
+    height: 70px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .btn-contato__icon {
+    width: 38px;
+    height: 38px;
+  }
+  .btn-contato__label {
+    font-size: 12px;
+  }
+  .btn-contato__phone {
+    font-size: 14px;
+  }
+  .footer {
+    padding: 16px 16px 24px 16px;
+    gap: 10px;
   }
 }
