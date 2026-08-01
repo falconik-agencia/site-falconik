@@ -3,6 +3,7 @@
   --rosa: #FC385E;
   --magenta: #C2129A;
   --indigo: #241264;
+  --lilas: #F9F7FF;
 
   --frame-w: 1440px;
   --frame-h: 800px;
@@ -21,7 +22,7 @@ html, body {
 
 body {
   font-family: 'Mulish', sans-serif;
-  background: #ffffff;
+  background: var(--lilas);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,6 +229,7 @@ body {
   z-index: 1;
   padding: 0 var(--frame-padding) var(--frame-padding) var(--frame-padding);
   padding-top: 24px;
+
   display: flex;
   align-items: center;
   gap: 40px;
@@ -245,23 +247,23 @@ body {
 
 .footer__line {
   position: relative;
-  width: 600px;
-  max-width: 100%;
+  flex: 1;
   height: 8px;
   display: flex;
   align-items: center;
-  flex: none;
 }
 
 .footer__line-track {
   width: 100%;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg,
+  background: linear-gradient(
+    90deg,
     var(--indigo) 0%,
     var(--magenta) 44%,
     var(--rosa) 72%,
-    var(--laranja) 100%);
+    var(--laranja) 100%
+  );
 }
 
 .footer__line-dot {
@@ -271,6 +273,21 @@ body {
   height: 8px;
   border-radius: 50%;
   background: var(--laranja);
+}
+
+.footer__email {
+  margin-left: auto;
+  font-family: 'Mulish', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #808080;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.footer__email:hover {
+  color: var(--magenta);
 }
 
 /* ============ RESPONSIVE ============ */
